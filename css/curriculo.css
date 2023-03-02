@@ -1,0 +1,20 @@
+body {
+    font-family: 'Golos Text', sans-serif;
+}
+
+#apresentacao{
+    text-align: center;
+}
+
+#apresentacao img{
+    border-radius: 200px;
+}
+
+#dpessoal li {
+    margin-top: 10px;
+}
+
+#formAcad table{
+    text-align: center;
+}
+
