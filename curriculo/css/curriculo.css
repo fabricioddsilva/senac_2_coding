@@ -1,20 +1,57 @@
 body {
-    font-family: 'Golos Text', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 12%;
+    margin-right: 12%;
+    background: linear-gradient(#FFF2F2,#E9F8F9);
 }
 
-#apresentacao{
+
+
+h2 {
+    text-align: center;
+}
+
+.curriculo{
     text-align: center;
 }
 
 #apresentacao img{
     border-radius: 200px;
+    border: solid;
 }
 
-#dpessoal li {
-    margin-top: 10px;
+#dpessoal li{
+    margin-top: 1%;
 }
 
-#formAcad table{
+#tabelaForm {
+    text-align: center; 
+}
+
+#tabelaForm{
+    border: 2px solid;
+    background: #ECF9FF;
+    border-collapse: collapse;
+    margin-bottom: 2%;
+}
+
+#tabelaForm tr th{
+    border: 2px solid;
+    background: #93BFCF;
+    
+}
+
+#tabelaForm tr td{
+    border: 2px solid;
+
+}
+
+#formacaoComp{
     text-align: center;
-}
+    
+
+
+
+
+
 

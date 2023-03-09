@@ -3,18 +3,21 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currículo Fabrício Dias</title>
+    <link href="../css/curriculo.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <session id="info">
     <!--Apresentação do Currículo, mostrando a Foto e o Nome-->
-    <div id="apresentacao">
-        <center>
-        <h1>Fabrício Dias da Silva</h1>
-        <img src="../img/fabrício foto.jpg" width="200" weight="200">
-    </center>
+    <div id="apresentacao" class="curriculo">
+            <h1>Fabrício Dias da Silva</h1>
+            <img src="../img/fabrício foto.jpg" width="200" weight="200">
         <hr>
     </div>
 
@@ -41,30 +44,31 @@
     <div id="sobre">
         <h2>Sobre:</h2>
         <p>Graduação em Andamento em Analise e Desenvolvimento de Sistemas pela Faculdade SENAC Pernambuco, Aluno do
-            Projeto START 2022 pela turma Java onde foi criando uma aplicação WEB usando o Framework SpringBoot junto a HTML e CSS
+            Projeto START 2022 pela turma Java onde foi criando uma aplicação WEB usando o Framework SpringBoot junto a
+            HTML e CSS
         </p>
         <hr>
     </div>
 
     <!--Formações Academicas-->
-    <div id="formAcad">
+    <div id="formAcad" class="curriculo">
         <h2>Formação Acadêmica:</h2>
         <br>
         <center>
-            <table>
-                <tr>
+            <table id="tabelaForm">
+                <tr id="tabelaTitulo">
                     <th>Curso</th>
                     <th>Instituição</th>
                     <th>Período</th>
                 </tr>
 
-                <tr>
+                <tr id="tabelaDados">
                     <td>Gradução em Analise e Desenvolvimento de Sistemas</td>
                     <td>Faculdade SENAC PE</td>
                     <td>2022-2024</td>
                 </tr>
 
-                <tr>
+                <tr id="tabelaDados">
                     <td>Projeto START Recife (Turma JAVA)</td>
                     <td>Rede Cidadã</td>
                     <td>2022</td>
@@ -78,10 +82,27 @@
     <!--Formações Complementares-->
     <div id="formacaoComp">
         <h2>Formação Complementar:</h2>
-        <ol>
-            <li>Lógica de Programação Essencial - DIO</li>
-            <li>Treinamento Online em Java - Americanas Tech</li>
-        </ol>
+        <center>
+        <table id="tabelaForm">    
+                <tr id="tabelaTitulo">
+                    <th>Curso</th>
+                    <th>Instituição</th>
+                    <th>Período</th>
+                </tr>
+
+                <tr id="tabelaDados">
+                    <td>Logica de Programação Essencial</td>
+                    <td>DIO</td>
+                    <td>2022</td>
+                </tr>
+
+                <tr id="tabelaDados">
+                    <td>Treinamento Online em Java</td>
+                    <td>Americanas</td>
+                    <td>2022</td>
+                </tr>
+        </table>
+    </center>
         <hr>
     </div>
 
@@ -92,6 +113,7 @@
             Morro da Conceição<br>Recife, PE - Brasil
         </address>
     </div>
+    </session>
 </body>
 
 </html>
