@@ -1,4 +1,8 @@
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.dropdown-trigger');
-    var instances = M.Dropdown.init(elems, options);
-  });
+const ola = document.getElementById("ola");
+ola.addEventListener("click", saudacoes)
+
+function saudacoes(){
+    let nome = prompt("Olá Mundo")
+    //alert("Olá" + " " + nome + "!");
+    alert(`Olá, ${nome}!`)
+}

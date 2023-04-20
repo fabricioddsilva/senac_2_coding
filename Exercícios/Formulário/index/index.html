@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="../css/formulario.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="container">
+    <div>
+        <fieldset class="row">
+            <form class="col s12" name="formulario">
+                <div class="row">
+                    <div class="col s6 input-field inline">
+                        <label for="nome">Nome*</label>
+                        <input type="text" id="nome" name="nome" required><br>
+                    </div>
+                    <div class="col s6 input-field inline">
+                        <label for="sobrenome">Sobrenome*</label>
+                        <input type="text" id="sobrenome" name="sobrenome" required><br>
+                    </div>
+                </div>
+                <br><br>
+                <div class="row">
+                    <div class="col s12">
+                        <label for="telefone">Telefone*</label>
+                        <input type="tel" id="telefone" name="telefone" placeholder="(99) 999999-9999" maxlength="15" onkeyup="handlePhone(event)" required>
+                    </div>
+                </div>
+                <br><br>
+                <div class="row">
+                    <div class="col s12 input-field inline">
+                        <label for="email">Email*</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+                <br><br>
+                <div class="row">
+                    <div class="col s12">
+                        <label for="mensagem">Mensagem*</label><br><br> 
+                        <textarea id="mensagem" nome="mensagem" rows="4" cols="50" placeholder="Informe o que deseja." required></textarea><hr>
+                    </div>
+                </div>
+                <br><br>
+                <div class="row">
+                    <div class="input-field col s12">
+                        
+                        <select id="linguagem" name="linguagem">
+                            <option value="" selected disabled>Escolha a sua Lingua</option>
+                            <option value="portugues">Português(pt-br)</option>
+                            <option value="ingles">Inglês(en-us)</option>
+                            <option value="espanhol">Espanhol(es)</option>
+                            <option values="frances">Frânces(fr)</option>
+                        </select> 
+                    </div>
+                </div>
+                <br><br>
+                <div class="row">
+                    <div class="col s12">
+                        <label for="prototipo">Prototipo:</label><br><br>
+                        <input type="file" id="prototipo" name="prototipo" accept=".jpeg, .png, .pdf, .doc, .docx">
+                    </div>
+                </div>
+                <br><br>
+                <div class="row">
+                    <div class="col s12">
+                        <label for="linguagemProg">Selecione a(s) linguagem(ens) preferidas</label>
+                        <select id="linguagemProg" name="linguagemProg" multiple>
+                            <option value="java">Java</option>
+                            <option value="c">C</option>
+                            <option value="c++">C++</option>
+                            <option value="php">PHP</option>
+                        </select>
+                    </div>
+                </div>
+                <br><br>
+                <div id="banco">
+                    <label for="banco">Banco de Dados:</label><br><br>
+                    <div class="row" >
+                        <label class="col s2">
+                            <input type="radio" value="mysql" name="banco">
+                            <span>MySQL</span>
+                        </label>
+                        <label class="col s2">
+                            <input type="radio" value="postgresql" name="banco">
+                            <span>PostgreSQL</span>
+                        </label>
+                        <label class="col s2">
+                            <input type="radio" value="mongodb" name="banco">
+                            <span>MongoDB</span>
+                        </label>
+                        <label class="col s2">
+                            <input type="radio" value="n/a" name="banco">
+                            <span>N/A</span>
+                        </label>
+                        <label class="col s2">
+                            <input type="radio" value="outro" name="banco">
+                            <span>Outro</span>
+                        </label>
+                    </div>
+                </div>
+                <br><br>
+                <div id="reuniao">
+                    <label for="reuniao">Turno para Reuniões*</label><br><br>
+                    <div class="row">
+                        <label class="col s2">
+                            <input type="checkbox" value="manha" name="turno">
+                            <span>Manhã</span>
+                        </label>
+                        <label class="col s2">
+                            <input type="checkbox" value="tarde" name="turno"> 
+                            <span>Tarde</span>
+                        </label>
+                        <label class="col s2">
+                            <input type="checkbox" value="noite" name="turno">
+                            <span>Noite</span>
+                        </label>
+                    </div>
+                </div>
+                <div>
+                    <div>   
+                        <label for="horario">Horário Sugerido:</label>
+                        <input type="time" name="horario" id="horario">
+                    </div>
+                </div>
+                <br><br>
+                <div>
+                    <div>
+                        <label for="data">Data Prevista para Entrega*   </label>
+                        <input type="date" name="data" id="data" required>
+                    </div>
+                </div>
+                <br><br>
+                <div class="row">
+                    <div class="col s1">
+                        <input type="submit" name="submit" id="submit" onclick="validar()">
+                    </div>
+                    <div class="col s1">
+                        <input type="reset" value="Limpar">
+                    </div>
+                </div>
+            </form>
+        </fieldset>
+    </div>
+    <script src="../js/formulario.js"></script>
+    <script src="https://kit.fontawesome.com/1ae389d098.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>
